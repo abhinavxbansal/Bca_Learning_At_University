@@ -1,68 +1,32 @@
 //Write a C program that allows the user to enter 'N' numbers and find the total positive numbers and total negative numbers using a for loop.
 
-// C program to find the count of positive
-// and negative integers in an array
- 
-#include <stdio.h>
- 
-// Function to find the count of
-// positive integers in an array
-int countPositiveNumbers(int* arr, int n)
-{
- int pos_count = 0;
- int i;
- for (i = 0; i < n; i++) {
-  if (arr[i] > 0)
-   pos_count++;
- }
- return pos_count;
-}
- 
-// Function to find the count of
-// negative integers in an array
-int countNegativeNumbers(int* arr, int n)
-{
- int neg_count = 0;
- int i;
- for (i = 0; i < n; i++) {
-  if (arr[i] < 0)
-   neg_count++;
- }
- return neg_count;
-}
- 
-// Function to print the array
-void printArray(int* arr, int n)
-{
- int i;
- 
- printf("Array: ");
- for (i = 0; i < n; i++) {
-  printf("%d ", arr[i]);
- }
- printf("\n");
-}
- 
-// Driver program
-int main()
-{
- int limit;
- printf("eneter limit:");
-	scanf("%d",&limit);
-  int arr[limit];
-  for(int i=0;i<limit;i++)
-	{
-		scanf("%d",&arr[i]);
-  }
- int n;
- n = sizeof(arr) / sizeof(arr[0]);
- 
- printArray(arr, n);
- 
- printf("Count of Positive elements = %d\n",
-  countPositiveNumbers(arr, n));
- printf("Count of Negative elements = %d\n",
-  countNegativeNumbers(arr, n));
- 
- return 0;
+#include<stdio.h>
+
+int main()  
+{  
+    int elements, num, positive = 0, negative = 0,i;  
+  
+    printf("Enter the numbers of elements:");  
+    scanf("%d", &elements);  
+  
+    printf("Enter %d numbers\n", elements);  
+  
+    for(i=0;i<elements;i++)  
+    {  
+        scanf("%d", &num);  
+  
+        if(num >= 0)  
+        {  
+            positive++;  
+        }  
+        else 
+        {  
+            negative++;  
+        }
+    }  
+  
+    printf("\nNumber of Positive values: %d\n", positive);  
+    printf("Number of Negative Values: %d\n", negative);  
+  
+    return 0;                  //name-Agamjot Singh ,Roll no. 2210997017
 }
