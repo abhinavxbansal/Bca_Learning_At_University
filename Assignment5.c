@@ -31,5 +31,5 @@ int main()
     printf("\n\t Maximum score is: %d\n", max_score);
     printf("\n\t Number of students who are passed: %d\n", passed);
     printf("\n\t Number of students who are failed: %d\n", failed);
-    return 0;
+    return 0;       //name-Agamjot Singh ,Rollno.2210997017
 }
